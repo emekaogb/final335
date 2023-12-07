@@ -21,7 +21,7 @@ const app = express();
 const username = process.env.MONGO_DB_USERNAME;
 const password = process.env.MONGO_DB_PASSWORD;
 const dbName = process.env.MONGO_DB_NAME;
-const portNumber = 4000;
+const port = process.env.PORT || 3000;
 
 //initialize words JSON File
 const jsonData = fs.readFileSync('words.json', 'utf-8');
@@ -40,7 +40,9 @@ async function run() {
     await client.connect();
     await client.db("admin").command({ ping: 1 });
     app.use(express.static('public'));
-    app.listen(portNumber);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
 }
 run().catch(console.dir);
 
@@ -220,24 +222,4 @@ app.post("/language/:lang", async (req, res) => { // validates answer's correctn
   }
   
   res.redirect(`/language/${lang}`);
-});
-
-// command line read-in
-process.stdin.setEncoding("utf8");
-const prompt = `Web server started and running at http://localhost:${portNumber}\nStop to shutdown the server: `;
-process.stdout.write(prompt);
-process.stdin.on("readable", function () {
-  let dataInput = process.stdin.read();
-  if (dataInput !== null) {
-    let command = dataInput.trim();
-    if (command === "stop") {
-        client.close();
-      process.stdout.write("Shutting down the server\n");
-      process.exit(0);
-    } else {
-      process.stdout.write("Invalid command: " + command + "\n");
-    }
-    process.stdout.write(prompt);
-    process.stdin.resume();
-  }
 });
