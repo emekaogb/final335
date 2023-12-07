@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title><%- language %> Learning</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <h1><%- language %> Learning (<span style="color: green"><%- level %></span>)</h1>
+        <h2><%- name %>, you have learned <span style="color: green"><%- points %></span> words.</h2>
+        <div class="centered">
+            <form action="http://localhost:4000/language/<%- language %>" method="post">
+                <strong class="current-word"><%- word %></strong><p>
+                <input type="text" name="answer">
+                <input type="submit" name="check" value="Check">
+                <input type="text" name="points" value="<%- points %>" class="invisible">
+             </form><p></p>
+            <div class="display"><%- display %></div>
+        </div>
+        <img class="hint" src="https://www.svgrepo.com/show/106855/round-help-button.svg" value="Hint">
+        <div class="hidden-hint"><%- hint %></div>
+        <div class="leaderboard">
+            <form action="http://localhost:4000/leaderboard/<%- language %>" method="post">
+                <input type="submit" name="leaderboard" value="Leaderboard">
+            </form><p></p>
+            <a href="/select"><input type="button" name="newlang" value="Learn Another Language"></a> &nbsp; <a href="/"><input type=button value="Logout"></a>
+        </div>
+        <div class="<%- language %> flag"></div>
+    </body>
+
+</html>

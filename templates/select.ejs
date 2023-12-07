@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Language Learning App</title>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form action="http://localhost:4000/language" method="post">
+        <h1>Hi, <%- firstname %>!</h1>
+        <h2>Please select a language to study</h2>
+        <div class="centered">
+            <h3>EUROPE</h3>
+            <button type="submit" class="French image-button" name="french" value="french">
+                <span class="button-text">French</span>
+            </button> &nbsp; &nbsp; &nbsp;  
+            <button type="submit" class="Spanish image-button" name="spanish" value="spanish">
+                <span class="button-text">Spanish</span>
+            </button> &nbsp; &nbsp; &nbsp;
+            <button type="submit" class="Italian image-button" name="italian" value="italian">
+                <span class="button-text">Italian</span>
+            </button>
+            <h3>ASIA</h3>
+            <button type="submit" class="Hindi image-button" name="hindi" value="french">
+                <span class="button-text">Hindi</span>
+            </button> &nbsp; &nbsp; &nbsp;  
+            <button type="submit" class="Japanese image-button" name="japanese" value="spanish">
+                <span class="button-text">Japanese</span>
+            </button> &nbsp; &nbsp; &nbsp;
+            <button type="submit" class="Korean image-button" name="korean" value="italian">
+                <span class="button-text">Korean</span>
+            </button>
+            <h3>AFRICA</h3>
+            <button type="submit" class="Swahili image-button" name="swahili" value="french">
+                <span class="button-text">Swahili</span>
+            </button> &nbsp; &nbsp; &nbsp;  
+            <button type="submit" class="Zulu image-button" name="zulu" value="spanish">
+                <span class="button-text">Zulu</span>
+            </button> &nbsp; &nbsp; &nbsp;
+            <button type="submit" class="Igbo image-button" name="igbo" value="italian">
+                <span class="button-text">Igbo</span>
+            </button>
+        </div>
+        <div class="leaderboard">
+            Last login: <%- login %><p></p>
+            <a href="/"><input type=button value="Logout"></a>
+        </div>
+    </form>
+</body>
+
+</html>

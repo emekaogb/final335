@@ -1,0 +1,158 @@
+html {
+    size: 14px;
+}
+
+body {
+    background: linear-gradient(45deg, #ffffff, #d2c6c6);
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h4 {
+    text-align: center;
+}
+
+.image-button {
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0 0.3rem 0 rgba(0, 0, 0, 0.2))
+}
+
+.French {
+    background: url('https://www.shareicon.net/download/2015/09/09/98470_flag.ico') no-repeat center center/cover;
+}
+
+.Spanish {
+    background: url('https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png') no-repeat center center/cover;
+}
+
+.Italian {
+    background: url('https://cdn1.iconfinder.com/data/icons/flags-of-the-world-2/128/italy-circle-512.png') no-repeat center center/cover;
+}
+
+.Hindi {
+    background: url('https://cdn.countryflags.com/thumbs/india/flag-400.png') no-repeat center center/cover;
+    border-radius: 10rem;
+}
+
+.Japanese {
+    background: url('https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png') no-repeat center center/cover;
+    border-radius: 10rem;
+}
+
+.Korean {
+    background: url('https://worldflags.net/assets/img/flags/south-korea-flag.png') no-repeat center center/cover;
+    border-radius: 10rem;
+}
+
+.Swahili {
+    background: url('https://cdn-icons-png.flaticon.com/512/197/197608.png') no-repeat center center/cover;
+}
+
+.button-text {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+
+.current-word {
+    font-size: 1.3rem;
+}
+
+.hint {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+}
+
+.hidden-hint {
+    width: 10rem;
+    height: 10rem;
+    background-color: silver;
+    position: absolute;
+    top: 4.5%;
+    right: 2%;
+    padding: 0.5rem;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.2));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.hint:hover + .hidden-hint {
+    opacity: 1;
+}
+
+.invisible {
+    display: none;
+}
+
+.display {
+    color:red;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.leaderboard {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.currentUser {
+    border-color: gold;
+    color: green;
+    font-weight: bold;
+}
+
+.image-button:hover {
+    width: 7.5rem;
+    height: 7.5rem;
+    filter: drop-shadow(0 0.3rem 0.2rem rgba(0, 0, 0, 0.2));
+}
+
+.image-button:active {
+    width: 7rem;
+    height: 7rem;
+    filter: brightness(0.95);
+}
+
+.Zulu {
+    background: url('https://cdn-icons-png.flaticon.com/512/197/197562.png') no-repeat center center/cover;
+}
+
+.Igbo {
+    background: url('https://cdn.countryflags.com/thumbs/nigeria/flag-round-250.png') no-repeat center center/cover;
+}
+
+.flag {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    top: 2%;
+    left: 2%;
+}
+
+.main-page-img {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
