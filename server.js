@@ -73,6 +73,7 @@ app.get("/select", (req, res) => {
   if(!req.session.username){
     return res.status(404).send('Must sign in')
   }
+  req.session.display = "";
   res.render('select', {login: new Date().toLocaleDateString(), firstname: req.session.name});
 });
 // post select after logging in
