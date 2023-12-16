@@ -5,6 +5,7 @@ App Description:
     and start learning from the 9 languages that are available. If you get stuck on
     a word, there are hints in the upper right corner that will clue you in on what 
     the translation might be.
+    https://glocab.onrender.com
 
 API Links:
     Translatte: https://github.com/extensionsapp/translatte/blob/master/translatte_lg.png
